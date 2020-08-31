@@ -37,6 +37,8 @@
 ## Table of Contents
 
 * [Built With](#built-with)
+* [The Code](#code)
+* [Getting Started](#getting-started)
 * [Contributing](#contributing)
 * [License](#license)
 * [Contact](#contact)
@@ -48,6 +50,29 @@
 * [Python 3.8.5](https://python.org)
 * [Java JDK 14.0.1](https://www.oracle.com/uk/java/technologies/javase-downloads.html)
 
+
+## Code
+
+Below is my code organiszed by category and each script will have comments inside with a description of what the problem is, the solution and a reflection.
+
+* [The Code](#code)
+  * [Sequences](#sequences)
+  * [Selection](#selection)
+  * [Loops](#loops)
+  * [Functions](#functions)
+  * [Arrays](#arrays)
+
+### Sequences
+
+[Name Program - Class 1](https://github.com/71xn/IB-CompSci-Code-Log/blob/master/python/name-class-1.py)
+
+### Selection
+
+### Loops
+
+### Functions
+
+### Arrays
 
 
 <!-- GETTING STARTED -->
