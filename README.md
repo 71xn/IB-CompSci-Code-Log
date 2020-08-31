@@ -18,7 +18,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/71xn/IB-CompSci-Code-Log">
-    <img src="/images/profile.png" alt="Logo" width="80" height="80">
+    <img src="https://github.com/71xn/IB-CompSci-Code-Log/raw/master/images/profile.jpg" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">Finn's IB Computer Science Code Repo</h3>
