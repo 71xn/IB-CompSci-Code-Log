@@ -57,3 +57,5 @@ if json_convert["cod"] != "404":
     print("\n Weather description = " + str(weather_description))
 else:
     print(" City Not Found ")
+
+## Extension still Undecided - Would quite like to incorperate anoteher API as this was my first time using an api to get data into a python program ##
