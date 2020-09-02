@@ -55,24 +55,7 @@
 
 Below is my code organiszed by category and each script will have comments inside with a description of what the problem is, the solution and a reflection.
 
-* [The Code](#code)
-  * [Sequences](#sequences)
-  * [Selection](#selection)
-  * [Loops](#loops)
-  * [Functions](#functions)
-  * [Arrays](#arrays)
-
-### Sequences
-
-[Name Program - Class 1](https://github.com/71xn/IB-CompSci-Code-Log/blob/master/python/name-class-1.py)
-
-### Selection
-
-### Loops
-
-### Functions
-
-### Arrays
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQFpNpNM_-9b93GyTY7mo4zoxZCY7lSRrvws2Txu8yghUbBd94XWlvp5w0kUhbBMwCFrnW4TAWfNa_R/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
 
 
 <!-- GETTING STARTED -->
