@@ -53,9 +53,9 @@
 
 ## Code
 
-Below is my code organiszed by category and each script will have comments inside with a description of what the problem is, the solution and a reflection.
+Below is a link to view my code log on google sheets, this code log will have links to the code stored in this repo.
 
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQFpNpNM_-9b93GyTY7mo4zoxZCY7lSRrvws2Txu8yghUbBd94XWlvp5w0kUhbBMwCFrnW4TAWfNa_R/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+[**Google Sheets Code Log**](https://docs.google.com/spreadsheets/d/1ce9iHqciJj15Ib3IOnkeuCNIOLQuWrtHgsHe_JKSFmY/edit?usp=sharing)
 
 
 <!-- GETTING STARTED -->
