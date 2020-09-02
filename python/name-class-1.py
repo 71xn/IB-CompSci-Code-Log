@@ -1,5 +1,5 @@
-# Finn Lestrange - 2020
-# Name program
+# Finn Lestrange - 02/09/2020
+# Name Program - A simple hello program that shows you the weather and date, and how long till you're going to be a senior 
 
 # https://www.geeksforgeeks.org/python-find-current-weather-of-any-city-using-openweathermap-api/ - This is where I got the weather API code
 
