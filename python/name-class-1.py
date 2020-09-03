@@ -6,7 +6,7 @@
 from datetime import date, datetime
 import json
 import requests
-api_key = "125ae9807f4b8f5b0bacd1398d102070"
+api_key = "## INSERT API KEY HERE ##"
 url = "http://api.openweathermap.org/data/2.5/weather?"
 
 today = date.today()
