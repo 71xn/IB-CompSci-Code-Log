@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="CompSci_Assignment_2_EXT:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/CompSci_Assignment_2_EXT_jar</output-path>
+    <root id="archive" name="CompSci_Assignment_2_EXT.jar">
+      <element id="module-output" name="CompSci_Assignment_2_EXT" />
+    </root>
+  </artifact>
+</component>
