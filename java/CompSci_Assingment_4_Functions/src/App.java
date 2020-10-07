@@ -1,85 +1,49 @@
-// Finn Lestrange - 06/10/2020
-// Computer Science Assignment 4: Functions
-// Email Validator
+// Finn Lestrange Assignment 4 - Functions
 
 import java.util.ArrayList;
 import java.util.Arrays;
 
 public class App {
 
-    public static ArrayList<String> emailCheck(ArrayList<String> emails) {
+    public static ArrayList<String> validateEmails(ArrayList<String> emails) {
 
-        String tempEmail;
-        String tempChar;
-        int count = 1;
-        int count1 = 1;
-        int atCount = 0;
-        int periodCount = 0;
-        String prevChar;
-        String nextChar;
-        boolean bool1 = false;
-        boolean bool2 = false;
-        ArrayList<String> array = new ArrayList<>();
+        int at = 0;
+        int period = 0;
+        boolean nextTo = false;
+        ArrayList<String> arr = new ArrayList<>();
 
-        for (String email : emails) {
-            tempEmail = email;
-            //System.out.println(tempEmail);
-            for (int x = 0; x < tempEmail.length(); x++) {
-                tempChar = Character.toString(tempEmail.charAt(x));
-                // System.out.println(tempChar);
-                switch (tempChar) {
-                    case "@":
-                        if (!bool2) {
-                            atCount = 1;
-                            bool2 = true;
-                            break;
-                        } else {
-                            count1++;
-                        }
-
-                        //System.out.println(count1);
-                        //System.out.println("found @!");
-                        break;
-                    case ".":
-                        if (x > 0 && x < emails.size()) {
-                            prevChar = Character.toString(tempEmail.charAt(x-1));
-                            nextChar = Character.toString(tempEmail.charAt(x+1));
-                            if (prevChar.equals(".") || nextChar.equals(".")) {
-                                periodCount++;
-                                bool1 = true;
-                                break;
-                            } else if (prevChar.equals("@") || nextChar.equals("@")) {
-                                periodCount++;
-                                bool1 = true;
-                                break;
-                            }
-                        }
-                        break;
+        for (int i = 0; i < emails.size(); i++) {
+            String email = emails.get(i);
+            if (email.contains("@.") || email.contains(".@")) {
+                nextTo = true;
+            }
+            for (int x = 0; x < email.length(); x++) {
+                String char1 = Character.toString(email.charAt(x));
+                if (char1.equals("@")) {
+                    at++;
+                } else if (char1.equals(".")) {
+                    period++;
                 }
             }
-            System.out.println(count);
-            System.out.println(count1);
-            if (bool1 || count1 > 1) {
-                array.add("F");
-            } else if (count1 == 0 && bool2) {
-                array.add("T");
+
+            if (at == 1 && period >=1 && !nextTo) {
+                arr.add("T");
             } else {
-                array.add("T");
+                arr.add("F");
             }
-            System.out.println(array);
-            count = 1;
-            count1 = 1;
+            at = 0;
+            period = 0;
+            nextTo = false;
         }
-        return array;
+        return arr;
     }
-
-
 
     public static void main(String[] args) {
 
         ArrayList<String> email1 = new ArrayList<>(Arrays.asList("abc@aol.com", "def@.com", "efg@abc", "sk@gmail.com"));
+        ArrayList<String> email2 = new ArrayList<>(Arrays.asList("a@aol.com", "d@.g.com", "e123g@abc.sg", "sk123@.abcgmail.com"));
 
-        System.out.println(emailCheck(email1));
-
+        System.out.println(validateEmails(email1));
+        System.out.println(validateEmails(email2));
     }
 }
