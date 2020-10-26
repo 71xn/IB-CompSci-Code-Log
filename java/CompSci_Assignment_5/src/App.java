@@ -67,8 +67,16 @@ public class App {
         for (int i = 0; i < names.length; i++) {
             System.out.print("Please enter month of birth for " + names[i] + ": ");
             int m = scanner.nextInt();
+            if (m < 1 && m > 12) {
+                System.out.print("Please enter month of birth for " + names[i] + ": ");
+                m = scanner.nextInt();
+            }
             System.out.print("Please enter year of birth for " + names[i] + ": ");
             int y = scanner.nextInt();
+            if (y < 2005 && y > 2010) {
+                System.out.print("Please enter year of birth for " + names[i] + ": ");
+                y = scanner.nextInt();
+            }
             codes[i] = codeGen(m, y);
             System.out.println("Unique code for " + names[i] + " is " + codes[i]);
             System.out.println("\n");
