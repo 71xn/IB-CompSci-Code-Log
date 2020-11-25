@@ -1,0 +1,174 @@
+Pseudocode Document:
+
+Rows: Zones
+Columns: Months
+notation: sales[rows][cols]
+
+a) Write a function that prints out the months that had the most and least total sales.
+
+FUNCTION months(m)
+	if m = 0
+		return January
+	if else m = 1
+		return February
+	if else m = 2				
+		return March
+	if else m = 3
+		return April
+	if else m = 4
+		return May
+	if else m = 5
+		return June
+	if else m = 6
+		return July
+	if else m = 7
+		return August
+	if else m = 8
+		return September
+	if else m = 9
+		return October
+	if else m = 10 
+		return November
+	if else m = 11 
+		return December
+	end if
+END FUNCTION
+
+FUNCTION minMaxSales(s[])
+	values[12] = {}
+
+	loop i from 0 to s.length
+		loop j from 0 to s[i].length
+			values[j] = values[j] + s[i][j]
+		end loop
+	end loop
+	
+	max = 0
+	min = 0
+	loop i from 0 to values.length
+		if values[i] < min then
+			min = i
+		else if values[i] > max then
+			max = i
+		end if
+	end loop
+	
+	output months(max) + ", had the most sales!"
+	output months(min) + ", had the least sales"
+END FUNCTION
+				
+	
+				
+b) Write a function that accepts a zone number (1-10 only) and returns the total sales for the year for that particular zone.
+
+FUNCTION zoneTotal(z, s[])
+	if z < 0 || z > 10 then
+		output "INVALID DATA"
+	end if
+	
+	total = 0
+	
+	loop i from 0 to s[z].length 
+		total = total + s[z][i]
+	end loop
+	
+	output "The total sales for zone: " + z + " was: " + total
+END FUNCTION
+
+
+
+c) Write a function that prints out all the zones that had better sales in the second half of the year (July - Dec) than the first one (Jan – Jun). Add the qualifying zone numbers into a queue and display.
+
+FUNCTION betterSales(s[])
+	// zones is an initially empty queue
+	
+	first[12] = {}
+	second[12] = {}
+	
+	loop i from 0 to 6
+		loop j from 0 to s[i].length
+			first[i] = first[i] + s[i][j]
+		end loop
+	end loop
+	
+	loop i from 6 to 11
+		loop j from 0 to s[i].length
+			second[i] = second[i] + s[i][j]
+		end loop
+	end loop
+	
+	loop i from 0 to first.length
+		if second[i] > first[i]
+			zones.enqueue(i)
+		end if
+	end loop
+	
+	while !zones.isEmpty()
+		output "Zone " + zones.dequeue() + " had better sales in the second half of the year!"
+	end while
+END FUNCTION
+
+
+
+d) Write a function that checks which zones sold lesser units than that month’s all zone average. Add the qualifying zones into a stack and display along with month name.
+
+FUNCTION monthAvg(m, s[])
+	total = 0
+	loop i from 0 to s[].length
+		total = total + s[i][m]
+	end loop
+	
+	return total / 10
+END FUNCTION
+
+FUNCTION avgSales(s[])
+	// zones is an initially empty stack of type integer
+	// months is an initially empty stack of type integer
+	
+	loop i from 0 to 12
+		monthavg = monthAvg(i, s[])
+		loop j from 0 to s[].length
+			if s[j][i] < monthavg
+				zones.push(s[j][i])
+				months.push(i)
+			end if
+		end loop
+	end loop
+	
+	while zones.hasNext()
+		output months(months.pop()) + " " + zones.pop()
+	end while
+END FUNCTION
+
+
+
+e) Write a function that prints out a final end of the year sales report (Jan - Dec) sorted by most sales in a zone to the least.
+
+FUNCTION salesReport(s[])
+	sales[10]
+	zones[10]
+	
+	loop i from 0 to s[].length
+		loop j from 0 to s[i].length
+			sales[i] = sales[i] + s[i][j]
+		end loop
+		zones[i] = i
+	end loop
+	
+	loop i from 0 to sales.length
+		loop j from i+1 to sales.length
+			if sales[i] > sales[j]
+				temp = sales[i]
+				temp1 = zones[i]
+				sales[i] = sales[j]
+				zones[i] = zones[j]
+				sales[j] = temp 
+				zones[j] = temp1
+			end if
+		end loop
+	end loop
+	
+	loop i from 0 to sales.length
+		output "Zone "zones[i] + ": " + sales[i]
+	end loop
+END FUNCTION
