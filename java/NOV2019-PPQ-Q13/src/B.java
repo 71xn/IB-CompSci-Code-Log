@@ -1,3 +1,6 @@
+// Finn Lestrange - 12/05/2021
+// IB Past Paper 1 - HL - November 2019 - Question 13
+
 public class B {
 
     public int[][] MAT = {
@@ -12,6 +15,15 @@ public class B {
     public boolean isValidMatrix(int n, int[][] A) {
         boolean invalid = false;
         int r = 0;
+
+        /*
+        The code searches row by row, checking that neighboring pairs are both non zero values
+        using Math.abs(r-c)<2, e.g checking main diagonal and the sub diagonal
+        If value is 0 && we are at the end of the rwo, it breaks and we increment row (r) by one
+        then we move onto the next row checking each column for non-zero value and if the space between values being
+        checked is not more than 2 as if it is more than two then the sub-diagonal and main diagonal contain zero
+        values
+        */
 
         while ((r < n) && !invalid) {
             int c = 0;
